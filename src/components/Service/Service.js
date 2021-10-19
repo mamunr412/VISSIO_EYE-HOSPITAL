@@ -7,16 +7,13 @@ const Service = (props) => {
     const { Name, img, id, description } = props.service
 
     return (
-        <div className="mt-5 full-card">
+        <div className="mt-5 service ">
             <Col>
-                <Card>
-                    <Card.Img variant="top" className="card-img" src={img} />
+                <Card className="card-img" >
+                    <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>{Name}</Card.Title>
-                        <Card.Text>
-                            {description}
-                        </Card.Text>
-
+                        <p>{description.slice(0, 100)}</p>
                         <Link to={`/service/${id}`} >
                             <Button variant="primary">Details</Button>{' '}
                         </Link>
