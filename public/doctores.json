@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "Name": "Dr. SB Rasel",
+        "degre": "MBBS,(DMC), FCPS (Eye), FIVRS",
+        "hospital": "Fellow Retina, Shankar Foundation,India.",
+        "specialist": "Vitreo-Retina Specialist",
+        "img": "https://visioneyebd.org/uploads/doctors/doctor_20200422040242.png"
+    },
+    {
+        "id": 2,
+        "Name": "Dr. Md. Hasanuzzaman",
+        "degre": "MBBS. MCPS. FCPS (Eye)",
+        "hospital": "Fellow Ocular Oncology (Wills Eye Hospital, USA)",
+        "specialist": "Phaco, Ocular Oncologist and Eye cosmetic surgeon",
+        "img": "https://visioneyebd.org/uploads/doctors/doctor_20200422032927.png"
+    },
+    {
+        "id": 3,
+        "Name": "Dr. Md. Abid Akbor",
+        "degre": "MBBS, D.Ophth(DU)",
+        "hospital": "Laser DCR & Phaco Surgeon",
+        "specialist": "Consultant Eye Specialist",
+        "img": "https://visioneyebd.org/uploads/doctors/doctor_20200422064350.png"
+    },
+    {
+        "id": 4,
+        "Name": "Dr. Md. Masudul Hasan",
+        "degre": "MBBS, FCPS, D-Opth, MCPS (Eye)",
+        "hospital": "Fellowship in Cornea & Anterior Segment",
+        "specialist": "Consultant:Cornea,Refractive,Phaco and Transplant surgery",
+        "img": "https://visioneyebd.org/uploads/doctors/9a8eb70b6359550a9346d3fd61691c32.png"
+    },
+    {
+        "id": 5,
+        "Name": "Dr. Muhammad Moniruzzaman",
+        "degre": "MBBS, FCPS, FSIO",
+        "hospital": "ellow Shankar Institute of Ophthalmology(India)",
+        "specialist": "Eye Specialist & Surgeon",
+        "img": "https://visioneyebd.org/uploads/doctors/077ce22b903f69ee4650e35be2260eff.png"
+    },
+    {
+        "id": 6,
+        "Name": "Dr. Siddiqur Rahman",
+        "degre": "MBBS, D-Ophth, FCPS (Eye)",
+        "hospital": "Fellow on Glaucoma (India)",
+        "specialist": "Glaucoma Specialist",
+        "img": "https://visioneyebd.org/uploads/doctors/56b4549f8c90df41554ee4ee61f587e6.jpg"
+    }
+]

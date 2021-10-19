@@ -1,0 +1,19 @@
+.single-details{
+    background-color: #f8fafc;
+    height: 600px;
+
+}
+.single{
+    margin: 20px 20px;
+}
+.single-img {
+    width: 500px;
+    height: 300px;
+}
+.service-details h3{
+    margin: 18px 0px;
+
+}
+.service-details p{
+    text-align: justify;
+}

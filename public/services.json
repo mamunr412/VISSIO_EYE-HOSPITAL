@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "Name": "LOW VISION AND VISION THERAPY",
+        "description": "Persons have 6/18 or worse vision in better eye( in spite of all medical and surgical treatment) are included in Low Vision Group. we have special services to improve their quality of life. we have various type of vision therapy options for different ages of child having Lazy Eye to improve vision",
+        "img": "https://www.nvisioncenters.com/wp-content/uploads/shutterstock_1018072846.jpg"
+    },
+    {
+        "id": 2,
+        "Name": "ROP: RETINOPATHY OF PREMATURITY",
+        "description": "ROP is blinding disease of premature babies who needs extra oxygen for several days for survival. they need immediate eye examination to rullout the disease and if present, urgent treatment",
+        "img": "https://www.sightmd.com/wp-content/uploads/2017/03/retinopathy-of-prematurity.jpg"
+    },
+    {
+        "id": 3,
+        "Name": " STANDARD TREATMENT FOR GLAUCOMA ",
+        "description": "Glaucoma is a symptomless silent killer of vision. we have worldclass facilities of glaucoma diagnosis , management and surgeries including implantation of glaucoma drainage devices.",
+        "img": "https://www.rajaseyehospital.com/wp-content/uploads/2020/09/4.jpg"
+    },
+    {
+        "id": 4,
+        "Name": "VITREO-RETINA SERVICES",
+        "description": "Retinal diseases management, Vitreo-Retina surgery, Retinal Laser and various Procedures we do in affordable price",
+        "img": "https://5.imimg.com/data5/KG/WT/GLADMIN-64635929/vitreo-retina-services-500x500.png"
+    },
+    {
+        "id": 5,
+        "Name": "COLLAGEN CROSS LINKING (C3R)",
+        "description": "This is the only treatment of Keratoconus (an rare blinding disease of cornea)to re-inforce the collagen fibres of cornea . this treatment halts the disease procedure.",
+        "img": "https://www.researchgate.net/profile/Hossein-Ghodsi-2/publication/303979426/figure/fig1/AS:568964054622214@1512663009892/a-Cross-link-assembly-representations-b-The-cross-linking-atomic-structure-c.png"
+    },
+    {
+        "id": 6,
+        "Name": "LASER DCR",
+        "description": "Painless, Stitch less, Scarless Laser procedure to re-establish tear drainage system of eye. This price is for One eye",
+        "img": "https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-030-21217-9_66/MediaObjects/370103_1_En_66_Fig1_HTML.png"
+    }
+]

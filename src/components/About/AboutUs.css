@@ -1,0 +1,16 @@
+
+.about-container img{
+    margin-top: 50px;
+    width: 100%;
+    }
+    .blog-header{
+        margin-top: 10px;
+    }
+    .blog-header h1{
+        
+        color: rgb(85, 85, 148);
+    }
+    .blog-header h5{
+        text-align: justify;
+        margin-top: 8px;
+    }
