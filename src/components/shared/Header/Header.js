@@ -33,7 +33,7 @@ const Header = () => {
                                 <Link style={{ textDecoration: 'none', marginBottom: "10px" }} to="/contact">CONATACT </Link>
                                 {
                                     user.email ? <div>
-                                        <h4>{user?.displayName}</h4>
+                                        <h4>{user.displayName}</h4>
                                         <Button onClick={logOut} style={{ marginTop: "15px" }}>Log Out</Button></div> : <div>
                                         <Link style={{ textDecoration: 'none', marginRight: "15px" }} to="/login">Sign In</Link>
                                         <Link style={{ textDecoration: 'none' }} to="/register">Sign up</Link>
