@@ -15,7 +15,6 @@ const Footer = () => {
                                 <h5>Licenses</h5>
                             </div>
                         </div>
-
                     </Col>
                     <Col className="mt-3 mb-1">
                         <div className="footer">
@@ -36,6 +35,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </Col>
+
                 </Row>
             </Container>
         </div>

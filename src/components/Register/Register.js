@@ -60,11 +60,16 @@ const Register = () => {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control onBlur={handelPassword} type="password" placeholder="Password" />
                             </Form.Group>
+                            <div className="d-flex">
+                                <Button variant="success btn-block " type="submit" onClick={handelRegister} className="mt-2 ">
+                                    Register
+                                </Button>
+                                <div className="mx-3  mt-3 ">
+                                    <p >Already Have Account <Link to='/login' style={{ textDecoration: "none" }}>Log In </Link></p>
+                                </div>
+                            </div>
 
-                            <Button variant="success btn-block " type="submit" onClick={handelRegister} className="mt-2 ">
-                                Register
-                            </Button>
-                            <p>Already Have Account <Link to='/login' style={{ marginLeft: "80px", textDecoration: "none" }}>Log In </Link></p>
+
                         </Form>
                     </Col>
                 </Row>

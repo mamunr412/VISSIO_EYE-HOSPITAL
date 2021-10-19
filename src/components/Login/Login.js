@@ -9,8 +9,9 @@ import './Login.css'
 
 
 const Login = () => {
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
     let history = useHistory()
     let location = useLocation();
     const { singnInWithGoogle, setuser, handelsingIn, setIsloading } = useAuth()
@@ -37,7 +38,9 @@ const Login = () => {
             .then((result) => {
                 history.push(Redirect_url)
             })
-
+            .catch((error) => {
+                setError("Password does't match")
+            });
     }
 
     return (
@@ -64,11 +67,14 @@ const Login = () => {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control onBlur={loginPassword} type="password" placeholder="Password" />
                             </Form.Group>
+                            <h6 style={{ color: "red" }}>{error}</h6>
 
-                            <Button variant="success btn-block" type="submit" onClick={handelLogin} className="mt-2 ">
-                                Login
-                            </Button>
-                            <p>New In Website? <Link to='/register' style={{ marginLeft: "150px", textDecoration: "none" }}>Create Account</Link></p>
+                            <div className="d-flex">
+                                <Button variant="success btn-block" type="submit" onClick={handelLogin} className="mt-2 ">
+                                    Login
+                                </Button>
+                                <p className="mx-3 mt-3">New In Website? <Link to='/register' style={{ marginLeft: "0px", textDecoration: "none" }}>Create Account</Link></p>
+                            </div>
                         </Form>
 
                     </Col>
