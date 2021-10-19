@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+
 import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -8,6 +8,9 @@ import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
     const { user, logOut } = useAuth()
+    const autoReload = () => {
+        return window.location.reload
+    }
     return (
         <div>
             <Navbar bg="light" expand={false}>
@@ -33,8 +36,9 @@ const Header = () => {
                                 <Link style={{ textDecoration: 'none', marginBottom: "10px" }} to="/contact">CONATACT </Link>
                                 {
                                     user.email ? <div>
-                                        <h4>{user.displayName}</h4>
-                                        <Button onClick={logOut} style={{ marginTop: "15px" }}>Log Out</Button></div> : <div>
+                                        <h4 onBlur={autoReload}>{user.displayName}</h4>
+                                        <Button onClick={logOut} style={{ marginTop: "15px" }}>Log Out</Button>
+                                    </div> : <div>
                                         <Link style={{ textDecoration: 'none', marginRight: "15px" }} to="/login">Sign In</Link>
                                         <Link style={{ textDecoration: 'none' }} to="/register">Sign up</Link>
 

@@ -3,12 +3,13 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
-import Header from '../shared/Header/Header';
+
 
 const Register = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setpssword] = useState("")
+    const [error, setError] = useState('')
     const { registerNewUser, setUserName } = useAuth()
     let history = useHistory()
     let location = useLocation();
@@ -25,9 +26,11 @@ const Register = () => {
         setpssword(e.target.value)
     }
 
+
     // user name set 
     const nameSet = () => {
         setUserName(name)
+
     }
     const handelRegister = (e) => {
         e.preventDefault()
@@ -36,7 +39,11 @@ const Register = () => {
                 nameSet()
                 history.push(Redirect_url)
             })
+            .catch((error) => {
+                setError("Password should be 6 charcater long")
+            });
     }
+
     return (
         <div >
             <Container >
@@ -55,7 +62,7 @@ const Register = () => {
                                 <Form.Label >Email address</Form.Label>
                                 <Form.Control onBlur={handelEmail} type="email" placeholder="Enter email" />
                             </Form.Group>
-
+                            <h6 style={{ color: "red" }}>{error}</h6>
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control onBlur={handelPassword} type="password" placeholder="Password" />
