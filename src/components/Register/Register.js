@@ -9,7 +9,7 @@ const Register = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setpssword] = useState("")
-    const [error, setError] = useState('')
+
     const { registerNewUser, setUserName } = useAuth()
     let history = useHistory()
     let location = useLocation();
@@ -41,9 +41,7 @@ const Register = () => {
                 nameSet()
                 history.push(Redirect_url, autoreload())
             })
-            .catch((error) => {
-                setError("Password should be 6 charcater long")
-            });
+
     }
 
     return (
@@ -69,7 +67,7 @@ const Register = () => {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control onBlur={handelPassword} type="password" placeholder="Password" />
                             </Form.Group>
-                            <h6 style={{ color: "red" }}>{error}</h6>
+
                             <div className="d-flex">
                                 <Button variant="success btn-block " type="submit" onClick={handelRegister} className="mt-2 ">
                                     Register
