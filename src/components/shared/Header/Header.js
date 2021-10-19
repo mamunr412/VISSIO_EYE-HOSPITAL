@@ -8,9 +8,7 @@ import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
     const { user, logOut } = useAuth()
-    const autoReload = () => {
-        return window.location.reload
-    }
+
     return (
         <div>
             <Navbar bg="light" expand={false}>
@@ -36,7 +34,7 @@ const Header = () => {
                                 <Link style={{ textDecoration: 'none', marginBottom: "10px" }} to="/contact">CONATACT </Link>
                                 {
                                     user.email ? <div>
-                                        <h4 onBlur={autoReload}>{user.displayName}</h4>
+                                        <h4 >{user.displayName}</h4>
                                         <Button onClick={logOut} style={{ marginTop: "15px" }}>Log Out</Button>
                                     </div> : <div>
                                         <Link style={{ textDecoration: 'none', marginRight: "15px" }} to="/login">Sign In</Link>

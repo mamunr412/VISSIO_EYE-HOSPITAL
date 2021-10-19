@@ -32,12 +32,14 @@ const Register = () => {
         setUserName(name)
 
     }
+    const autoreload = () => { return window.location.reload }
+
     const handelRegister = (e) => {
         e.preventDefault()
         registerNewUser(email, password)
             .then((result) => {
                 nameSet()
-                history.push(Redirect_url)
+                history.push(Redirect_url, autoreload())
             })
             .catch((error) => {
                 setError("Password should be 6 charcater long")
@@ -62,11 +64,12 @@ const Register = () => {
                                 <Form.Label >Email address</Form.Label>
                                 <Form.Control onBlur={handelEmail} type="email" placeholder="Enter email" />
                             </Form.Group>
-                            <h6 style={{ color: "red" }}>{error}</h6>
+
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control onBlur={handelPassword} type="password" placeholder="Password" />
                             </Form.Group>
+                            <h6 style={{ color: "red" }}>{error}</h6>
                             <div className="d-flex">
                                 <Button variant="success btn-block " type="submit" onClick={handelRegister} className="mt-2 ">
                                     Register
