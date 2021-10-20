@@ -14,9 +14,11 @@ const Login = () => {
     const [error, setError] = useState('')
     let history = useHistory()
     let location = useLocation();
-    const { singnInWithGoogle, setuser, handelsingIn, setIsloading } = useAuth()
-    const Redirect_url = location.state?.from || '/home'
-    const google = () => {
+    const { singnInWithGoogle, setuser, handelsingIn, setIsloading, signInWithFacebook } = useAuth()
+    const Redirect_url = location.state?.from || '/home';
+
+    // google sign in 
+    const googleSignIn = () => {
         singnInWithGoogle()
             .then(result => {
                 setuser(result.user)
@@ -24,7 +26,18 @@ const Login = () => {
             })
             .finally(() => setIsloading(false))
     }
+    // facebook sign in 
+    const facebookSignIn = () => {
+        signInWithFacebook()
+            .then((result) => {
+                setuser(result.user);
+                history.push(Redirect_url)
+            })
+            .finally(() => setIsloading(false))
+    }
 
+
+    // get all input value 
     const loginEmail = (e) => {
         setEmail(e.target.value)
     }
@@ -53,9 +66,9 @@ const Login = () => {
                     }}>
                         <h1 className="text-center pb-2" style={{ color: "black" }}>Sign in with</h1>
                         <div className="signinwith-other" >
-                            <button className="facebook">Facebook</button>
+                            <button onClick={facebookSignIn} className="facebook">Facebook</button>
 
-                            <button onClick={google}>Google</button>
+                            <button onClick={googleSignIn}>Google</button>
                         </div>
                         <Form>
                             <Form.Group controlId="formBasicEmail">

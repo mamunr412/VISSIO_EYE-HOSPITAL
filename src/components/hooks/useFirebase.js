@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, FacebookAuthProvider } from "firebase/auth";
 import { useEffect, useState } from "react";
 import Firebaseinit from "../Firebase/Firebase.init";
 
@@ -9,6 +9,8 @@ const useFirebase = () => {
     const [isloading, setIsloading] = useState(true)
     const [user, setuser] = useState({})
     const auth = getAuth();
+
+    // si  in with google 
     const singnInWithGoogle = () => {
         setIsloading(true)
         const googleProvider = new GoogleAuthProvider();
@@ -29,6 +31,15 @@ const useFirebase = () => {
 
     }, []);
 
+
+    // sing in with facebook 
+    const signInWithFacebook = () => {
+        setIsloading(true)
+        const facebookProvider = new FacebookAuthProvider();
+        return signInWithPopup(auth, facebookProvider)
+    }
+
+    // email password log in 
     const registerNewUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
 
@@ -62,7 +73,7 @@ const useFirebase = () => {
             .finally(() => setIsloading(false))
     }
 
-    return { user, singnInWithGoogle, setuser, logOut, registerNewUser, setUserName, handelsingIn, isloading, setIsloading }
+    return { user, singnInWithGoogle, setuser, logOut, registerNewUser, setUserName, handelsingIn, isloading, setIsloading, signInWithFacebook }
 }
 export default useFirebase;
 
