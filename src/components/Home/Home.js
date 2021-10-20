@@ -2,8 +2,8 @@ import React from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import Services from '../Services/Services';
 import photo1 from '../../image/Home-Slider-Desktop-2-Mar21.jpg';
-import photo2 from '../../image/Home-Slider-Desktop-2020eyecare.jpg';
-import photo3 from '../../image/Home-Slider-Desktop-Optom-1.jpg'
+import photo2 from '../../image/banner1.png';
+import photo3 from '../../image/banner5.png'
 
 
 
