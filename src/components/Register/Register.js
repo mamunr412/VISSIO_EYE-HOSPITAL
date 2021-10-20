@@ -9,6 +9,7 @@ const Register = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setpssword] = useState("")
+    const [error, setError] = useState('')
 
     const { registerNewUser, setUserName } = useAuth()
     let history = useHistory()
@@ -32,15 +33,21 @@ const Register = () => {
         setUserName(name)
 
     }
-    const autoreload = () => { return window.location.reload }
+
 
     const handelRegister = (e) => {
         e.preventDefault()
+        if (password.length < 6) {
+            setError("password must at least 6 character long")
+            return
+        }
         registerNewUser(email, password)
             .then((result) => {
                 nameSet()
-                history.push(Redirect_url, autoreload())
+                history.push(Redirect_url)
+
             })
+
 
     }
 
@@ -67,6 +74,7 @@ const Register = () => {
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control onBlur={handelPassword} type="password" placeholder="Password" />
                             </Form.Group>
+                            <div style={{ color: "red" }}>{error}</div>
 
                             <div className="d-flex">
                                 <Button variant="success btn-block " type="submit" onClick={handelRegister} className="mt-2 ">
