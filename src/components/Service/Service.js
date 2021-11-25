@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Service.css'
@@ -7,6 +7,7 @@ const Service = (props) => {
     const { Name, img, id, description } = props.service
 
     return (
+        
         <div className="mt-5">
 
             <Card style={{ width: '22rem' }} className="card-img" >

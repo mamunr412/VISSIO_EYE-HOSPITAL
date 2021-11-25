@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
-import Header from '../shared/Header/Header';
+
 import './Login.css'
 
 
@@ -58,7 +58,6 @@ const Login = () => {
 
     return (
         <div>
-
             <Container>
                 <Row className="mt-5">
                     <Col lg={5} md={6} sm={12} className="p-5 m-auto shadow-sm rounded-lg" style={{

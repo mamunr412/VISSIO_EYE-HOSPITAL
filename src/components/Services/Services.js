@@ -3,12 +3,17 @@ import { Container, Row, Spinner } from 'react-bootstrap';
 import Service from '../Service/Service';
 
 const Services = () => {
+useEffect(()=>{
+    document.title="SERVICES"
+},[])
+
     const [services, setServices] = useState([])
     useEffect(() => {
         fetch('/services.json')
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
+    }, []);
+    
     return (
         < div >
             <Container>

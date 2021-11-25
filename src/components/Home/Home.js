@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import Services from '../Services/Services';
 import photo1 from '../../image/Home-Slider-Desktop-2-Mar21.jpg';
@@ -8,6 +8,9 @@ import photo3 from '../../image/banner5.png'
 
 
 const Home = () => {
+    useEffect(()=>{
+        document.title="VISION EYE HOSPITAL"
+    },[])
     return (
         <div>
             <Container className="mt-5">

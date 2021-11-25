@@ -4,11 +4,16 @@ import Doctor from '../Doctor/Doctor';
 
 const Doctores = () => {
     const [doctors, setDoctors] = useState([])
+    useEffect(()=>{
+        document.title="doctors"
+    },[])
     useEffect(() => {
         fetch('/doctores.json')
             .then(res => res.json())
             .then(data => setDoctors(data))
     }, [])
+
+    
     return (
         <div>
             <Container>
