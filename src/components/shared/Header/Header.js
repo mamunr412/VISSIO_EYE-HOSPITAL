@@ -3,9 +3,6 @@ import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
-
-
-
 const Header = () => {
     const { user, logOut } = useAuth()
 
@@ -13,7 +10,7 @@ const Header = () => {
         <div>
             <Navbar bg="light" expand={false}>
                 <Container >
-                    <Navbar.Brand href="#">VISSION EYE HOSPITAL</Navbar.Brand>
+                    <Navbar.Brand href="#">VISION EYE HOSPITAL</Navbar.Brand>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas
                         id="offcanvasNavbar"
@@ -21,7 +18,7 @@ const Header = () => {
                         placement="end"
                     >
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel">VISSION EYE HOSPITAL</Offcanvas.Title>
+                            <Offcanvas.Title id="offcanvasNavbarLabel">VISION EYE HOSPITAL</Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
